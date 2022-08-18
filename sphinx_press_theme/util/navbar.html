@@ -1,0 +1,33 @@
+<navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="{{pathto(master_doc)}}" class="home-link">
+    {% if logo %}
+      <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="logo"/>
+    {% else %}
+      <span class="site-name">{{ project|e }}</span>
+    {% endif %}
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+      {%- include "util/navlinks.html" %}
+      {%- include "util/extlinks.html" %}
+      <!-- เพิ่ม menu -->
+      <div class="nav-item">
+        <a href="https://www.facebook.com/groups/netpie/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+    
+      </div>
+      <div class="nav-item">
+        <a href="https://www.youtube.com/channel/UCUx4rX08qf3rFdviFymCtZw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+    
+      </div>
+      <div class="nav-item">
+        <a href="https://netpie.io/guide"><i class="fa fa-book" aria-hidden="true"></i></a>
+    
+      </div>
+      <div class="nav-item">
+        <a href="mailto:contact@nexpie.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        
+      </div>
+    </navlinks>
+  </div>
+</navbar>
